@@ -16,6 +16,7 @@ assert btcTocad(1) == 45000
 
 def btcTocad(x):
     try:
+        x = float(x)
         currBTC = x * 45000
         return currBTC
     except:
@@ -31,5 +32,5 @@ are not executed.
 if __name__ == "__main__":
     
     assert btcTocad(1) == 45000
-    #assert btcTocad(2.5) == 135000
+    assert btcTocad(2.5) == 112500
     assert btcTocad('one') == 'error'

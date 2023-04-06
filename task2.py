@@ -8,9 +8,13 @@ n = # of compounding periods per year (how often interest is calculated)
 Output should be rounded to 2 decimal places
 r = rate of interest as a percentage
 """
-
+#FV = P*(1+R/N)^(N*T)
 def compoundInterest(P,r,t,n):
-    return
+    r = r / 100
+    FV = P * ((1 + (r/n)) ** (n * t))
+    FV = round(FV, 2)
+
+    return FV
 
 assert compoundInterest(1000,4,2,4) == 1082.86
 assert compoundInterest(2500,4.2,20,12) == 5782.43
